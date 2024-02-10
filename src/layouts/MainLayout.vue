@@ -5,7 +5,7 @@
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title class="text-weight-bold">
-          <span class="gt-xs">Twitter</span>
+          <span class="gt-xs">{{ $route.name }}</span>
           <q-icon
             name="flight_takeoff"
             size="sm"
@@ -26,14 +26,14 @@
       <q-icon name="flight_takeoff" size="lg" color="primary" class="q-pa-md" />
 
       <q-list>
-        <q-item clickable v-ripple to="/">
+        <q-item clickable v-ripple to="/" exact>
           <q-item-section avatar>
             <q-icon name="home" size="md" />
           </q-item-section>
           <q-item-section class="text-h6 text-weight-bold">Home</q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/about">
+        <q-item clickable v-ripple to="/about" exact>
           <q-item-section avatar>
             <q-icon name="info" size="md" />
           </q-item-section>
